@@ -14,13 +14,13 @@ function createSearchBox() {
     searchBox.setAttribute("id", "searchBox");
     searchBox.setAttribute("width", 100);
     searchBox.setAttribute("height", 30);
-    searchBox.setAttribute("placeholder", "inpute video link");
     searchCtr.appendChild(searchBox);
 
     var searchBtn = document.createElement('button');
     searchBtn.setAttribute("text", "search");
     searchBtn.setAttribute("width", 80);
     searchBtn.setAttribute("height", 30);
+    searchBtn.innerText = "New Text on Button";
     searchBtn.onclick = requestYoutube;
     searchCtr.appendChild(searchBtn);
 }
