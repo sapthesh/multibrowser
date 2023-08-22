@@ -14,6 +14,7 @@ function createSearchBox() {
     searchBox.setAttribute("id", "searchBox");
     searchBox.setAttribute("width", 100);
     searchBox.setAttribute("height", 30);
+    searchBox.setAttribute("placeholder", "inpute video link");
     searchCtr.appendChild(searchBox);
 
     var searchBtn = document.createElement('button');
