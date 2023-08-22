@@ -1,7 +1,7 @@
-/*function onClientLoad() {
+function onClientLoad() {
     gapi.client.setApiKey("AIzaSyAopzUJBrVaD7ncUFeREkAaPMYRH4-O22Y");
     gapi.client.load("youtube", "v3", onYouTubeLoaded);
-}*/
+}
 
 function onYouTubeLoaded() {
     createSearchBox();
