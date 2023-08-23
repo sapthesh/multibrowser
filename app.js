@@ -15,6 +15,10 @@ let videoId = '';
       iframeWrapper.appendChild(iframe);
       iframeContainer.appendChild(iframeWrapper);
     }
+
+    // Display current time
+    var currentTime = new Date().toLocaleTimeString();
+    document.getElementById("time").innerHTML = "Videos loaded at: " + currentTime;
   });
 
   document.getElementById("refreshButton").addEventListener("click", function () {
