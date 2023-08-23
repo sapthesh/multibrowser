@@ -28,6 +28,10 @@ body {
     border: none;
     cursor: pointer;
   }
+  #time {
+    margin-top: 20px;
+    font-size: 18px;
+  }
   #iframes {
     margin-top: 20px;
     display: flex;
@@ -36,8 +40,8 @@ body {
   }
   .iframe-container {
     border: 1px solid #ddd;
-    width: calc(33.33% - 20px);
-    padding-bottom: 300px;  /*16:9 aspect ratio */
+    width: calc(20% - 20px);
+    padding-bottom: 200px; /* 16:9 aspect ratio */
     position: relative;
   }
   iframe {
