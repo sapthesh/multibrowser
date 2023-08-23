@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  #container {
+    margin-top: 20px;
+  }
+  input[type="text"] {
+    width: 300px;
+    padding: 5px;
+    margin-right: 10px;
+  }
+  input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    margin-right: 10px;
+  }
+  #addButton {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  #refreshButton {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  #iframes {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .iframe-container {
+    border: 1px solid #ddd;
+    width: calc(33.33% - 20px);
+    padding-bottom: 300px;  /*16:9 aspect ratio */
+    position: relative;
+  }
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
