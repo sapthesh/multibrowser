@@ -1,5 +1,6 @@
 let videoId = '';
   let refreshInterval = null;
+  let secondsLeft = 0;
 
   document.getElementById("addButton").addEventListener("click", function () {
     videoId = document.getElementById("link").value;
@@ -15,10 +16,6 @@ let videoId = '';
       iframeWrapper.appendChild(iframe);
       iframeContainer.appendChild(iframeWrapper);
     }
-
-    // Display current time
-    var currentTime = new Date().toLocaleTimeString();
-    document.getElementById("time").innerHTML = "Videos loaded at: " + currentTime;
   });
 
   document.getElementById("refreshButton").addEventListener("click", function () {
@@ -27,14 +24,23 @@ let videoId = '';
       if (refreshInterval) {
         clearInterval(refreshInterval);
       }
-      refreshInterval = setInterval(refreshIframes, refreshSeconds * 1000);
+      secondsLeft = refreshSeconds;
+      refreshInterval = setInterval(refreshIframes, 1000);
       refreshIframes();
     }
   });
 
   function refreshIframes() {
-    var iframes = document.getElementsByTagName("iframe");
-    for (var i = 0; i < iframes.length; i++) {
-      iframes[i].src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&mute=1";
+    var timerDisplay = document.getElementById("timer");
+    timerDisplay.textContent = `Refreshing in ${secondsLeft} seconds`;
+    
+    if (secondsLeft <= 0) {
+      var iframes = document.getElementsByTagName("iframe");
+      for (var i = 0; i < iframes.length; i++) {
+        iframes[i].src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&mute=1";
+      }
+      secondsLeft = parseInt(document.getElementById("refresh").value);
+    } else {
+      secondsLeft--;
     }
   }
