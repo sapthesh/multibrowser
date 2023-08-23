@@ -1,4 +1,4 @@
-let videoId = '';
+  let videoId = '';
   let refreshInterval = null;
   let secondsLeft = 0;
 
@@ -32,7 +32,6 @@ let videoId = '';
 
   function refreshIframes() {
     var timerDisplay = document.getElementById("timer");
-    timerDisplay.textContent = `Refreshing in ${secondsLeft} seconds`;
     
     if (secondsLeft <= 0) {
       var iframes = document.getElementsByTagName("iframe");
@@ -41,6 +40,7 @@ let videoId = '';
       }
       secondsLeft = parseInt(document.getElementById("refresh").value);
     } else {
+      timerDisplay.textContent = `Refreshing in ${secondsLeft} seconds`;
       secondsLeft--;
     }
   }
