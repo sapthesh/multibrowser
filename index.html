@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi Browser</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container">
+  <label for="link">Enter YouTube Video ID:</label>
+  <input type="text" id="link" placeholder="Enter YouTube video ID">
+  <label for="count">Number of iframes:</label>
+  <input type="number" id="count" min="1" value="1">
+  <label for="refresh">Refresh interval (seconds):</label>
+  <input type="number" id="refresh" min="1" value="10">
+  <button id="addButton">Add Iframes</button>
+  <button id="refreshButton">Refresh Iframes</button>
+</div>
+<div id="iframes"></div>
+<script src="app.js"></script>
+</body>
+</html>
